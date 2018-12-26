@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Login = ({ onPressSend }) => (
   <View>
-    <TextInput type="text" placeholder="Login" />
+    <TextInput id="email" type="text" placeholder="Email" />
     <TextInput type="password" placeholder="Password" />
     <Button title="Send" onPress={onPressSend} />
   </View>
