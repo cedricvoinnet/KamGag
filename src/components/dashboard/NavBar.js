@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
-    backgroundColor: '#000',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 
 const NavBar = () => (
   <View style={styles.container}>
-    <Text>KamGag</Text>
+    {/* LogIn link/Profile pic + add post link */}
     <Image source={{ uri: 'https://img.icons8.com/color/48/000000/marceline.png' }} style={{ height: 20, width: 20 }} />
   </View>
 );
