@@ -1,32 +1,51 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
 import firebase from 'firebase';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { firebaseConfig } from './env';
+import FAB from 'react-native-fab';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
+import firebaseConfig from './env';
 import rootReducer from './src/store/reducers/rootReducer';
-import Dashboard from './src/components/dashboard/Dashboard';
+import CreatePost from './src/components/posts/CreatePost';
+import SignIn from './src/components/auth/SignIn';
+import HomeScreen from './src/Screens/HomeScreen';
 
 firebase.initializeApp(firebaseConfig);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    backgroundColor: 'darkgray',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-
 const store = createStore(rootReducer);
 
+const AppNavigator = createStackNavigator(
+  {
+    Home: {
+      screen: HomeScreen,
+    },
+    CreatePost: {
+      screen: CreatePost,
+    },
+    SignIn: {
+      screen: SignIn,
+    },
+  },
+  {
+    initialRouteName: 'Home',
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#000000',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
+  },
+);
+
+const AppContainer = createAppContainer(AppNavigator);
+
 const App = () => (
-  <View styles={styles.container}>
-    <Provider store={store}>
-      <Dashboard />
-    </Provider>
-  </View>
+  <Provider store={store}>
+    <AppContainer />
+  </Provider>
 );
 
 export default App;
