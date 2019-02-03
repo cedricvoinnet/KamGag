@@ -5,7 +5,9 @@ KamGag is a 9gag-like, only difference is that memes are about Kaamelott.
 Once you have published a meme, refresh by pulling down the list.
 
 Link of the app on expo: [KamGag expo link](https://expo.io/@iqyu/KamGag)
+
 Link of the apk on Mega: [KamGag apk](https://mega.nz/#!9Ed0VArY!SqgSBOmNcABhm0xjdw1A0y3du95PuZAH1kjp_UiX9mE)
+
 There is no link for an ipa because we don't have an Apple developper account.
 
 ## ToDo
