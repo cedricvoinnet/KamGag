@@ -9,6 +9,7 @@
       "android"
     ],
     "version": "1.0.0",
+    "description": "KamGag is a 9gag-like, only difference is that memes are about Kaamelott. Once you have published a meme, refresh by pulling down the list.",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
